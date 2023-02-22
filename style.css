@@ -84,7 +84,7 @@ body {
     content: "";
     position: absolute;
     left:0;
-    height:25%;
+    height:35%;
     width: 100%;
     border-left: 2px solid white;
     animation: typing 1.5s steps(60);
@@ -130,6 +130,7 @@ body {
 
 #aboutIntro {
     color: white;
+    max-width: 50%;
 }
 
 #aboutPhoto {
@@ -140,12 +141,10 @@ body {
 
 #aboutContainer {
     display: flex;
-    border: 2px solid white;
     height: 100vh;
 }
 
 #aboutPhotoContainer {
-    /* background-color: white; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -157,4 +156,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#meimg {
+    border-radius: 50%;
+    height:400px;
+    width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    #heroText {
+        font-size: 4em;
+    }
+
+    #heroText::after {
+        height: 15%;
+    }
+
+    #aboutContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    #meimg {
+        height: 200px;
+        width: 200px;
+    }
 }
