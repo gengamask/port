@@ -193,4 +193,12 @@ body {
         left:85%;
         position: fixed;
     }
+    
+    #who {
+        font-size: 1.5em;
+    }
+
+    #secondPar {
+        font-size: 1.2em;
+    }
 }
