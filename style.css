@@ -181,7 +181,7 @@ body {
 #aboutContainer {
     display: flex;
     border: 2px solid white;
-    height: 70vh;
+    height: 100vh;
 }
 
 #aboutPhotoContainer {
@@ -194,4 +194,7 @@ body {
 
 #aboutIntroContainer {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
