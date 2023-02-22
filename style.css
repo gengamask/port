@@ -38,11 +38,15 @@ body {
 }
 
 @keyframes typing {
-    100%{
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
-}
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
  
   /* float icon for github link */
 #me {
@@ -75,24 +79,19 @@ body {
 
 /* hero contents */
 #heroText {
-    font-size: 10em;
+    font-size: 8em;
     color: white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 5s steps(20, end),
+      blink-caret 0.5s step-end infinite;
     font-family: 'Silkscreen';
 }
 
-#heroText::after {
-    overflow: hidden;
-    content: "";
-    position:absolute;
-    left:0%;
-    height:30%;
-    width: 100%;
-    border-left: 2px solid white;
-    animation: typing 1.5s steps(60);
-    animation-iteration-count:1;
-    animation-fill-mode: forwards;
-    background: rgb(45, 45, 45);
-}
 
 /* nav contents */
 #navi {
@@ -167,6 +166,7 @@ body {
 
 #secondPar {
     font-size: 1.4em;
+    color: orange;
 }
 
 @media screen and (max-width: 768px) {
