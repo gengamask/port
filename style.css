@@ -24,7 +24,7 @@
   }
 
 body {
-    background-color: black;
+    background-color: rgb(45, 45, 45);
 }
 
 /* fade in as website opens */
@@ -58,14 +58,14 @@ body {
     font-family: 'Silkscreen';
     color: #fff;
     animation: fadeInUp 10s forwards; 
-    background-color: black;
+    background-color: rgb(45, 45, 45);
     max-height: 3em;
 }
 
 /* hero background */
 #heroHeader {
     height: 100vh;
-    background-color: black;
+    background-color: rgb(45, 45, 45);
 }
 
 /* hero container */
@@ -81,16 +81,17 @@ body {
 }
 
 #heroText::after {
+    overflow: hidden;
     content: "";
-    position: absolute;
-    left:0;
-    height:35%;
+    position:absolute;
+    left:0%;
+    height:30%;
     width: 100%;
     border-left: 2px solid white;
     animation: typing 1.5s steps(60);
     animation-iteration-count:1;
     animation-fill-mode: forwards;
-    background: black;
+    background: rgb(45, 45, 45);
 }
 
 /* nav contents */
@@ -164,6 +165,10 @@ body {
     width: 400px;
 }
 
+#secondPar {
+    font-size: 1.4em;
+}
+
 @media screen and (max-width: 768px) {
     #heroText {
         font-size: 4em;
@@ -182,5 +187,10 @@ body {
     #meimg {
         height: 200px;
         width: 200px;
+    }
+
+    #me{
+        left:85%;
+        position: fixed;
     }
 }
