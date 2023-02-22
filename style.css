@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Silkscreen';
+}
+
+body {
+    background-color: black;
+}
+
+/* fade in as website opens */
+@keyframes fadeInUp {
+    0%{
+    opacity: 0;
+    }
+    100%{ 
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+/* neon sign flicking */
+/* @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #438bff,
+        0 0 80px #438bff,
+        0 0 90px #438bff,
+        0 0 100px #438bff,
+        0 0 150px #438bff;
+    
+    }
+    
+    20%, 25%, 28% {        
+        text-shadow: none;
+    }    
+  } */
+
+  /* float icon for github link */
+#me {
+    height: 4em;
+    width:  4em;
+    position: fixed;
+    top: 5%;
+    left: 94%;
+}
+
+/* nav bar */
+#thisNav {
+    color: #fff;
+    /* text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #438bff,
+    0 0 82px #438bff,
+    0 0 92px #438bff,
+    0 0 102px #438bff,
+    0 0 151px #438bff; */
+    animation: fadeInUp 10s forwards; 
+    background-color: black;
+    max-height: 3em;
+}
+
+/* hero background */
+#heroHeader {
+    height: 100vh;
+    background-color: black;
+}
+
+/* hero container */
+#heroBanner {
+    max-width: 80%;
+    /* animation: fadeInUp 1s forwards; */
+}
+
+/* hero contents */
+#heroText {
+    font-size: 10em;
+    color: white;
+    /* text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #438bff,
+        0 0 82px #438bff,
+        0 0 92px #438bff,
+        0 0 102px #438bff,
+        0 0 151px #438bff;
+        animation: flicker 1.5s infinite alternate;  */
+}
+
+#heroText::after {
+    content: "";
+    position: absolute;
+    left:0;
+    height:25%;
+    width: 100%;
+    border-left: 2px solid white;
+    animation: typing 1.5s steps(60);
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+    background: black;
+}
+
+/* nav contents */
+#navi {
+    display: flex;
+    gap: 2em;
+    font-size: 1.2em;
+}
+
+/* rounding the padding */
+#naviContainer #navi a {
+    padding:0.5em;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+/* change color on hover for nav content */
+#naviContainer #navi a:hover {
+    color: #fff;
+    font-size: 1.3em;
+    transition: 1s;
+    cursor: pointer;
+    /* text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #ec43ff,
+    0 0 82px #ec43ff,
+    0 0 92px #ec43ff,
+    0 0 102px #ec43ff,
+    0 0 151px #ec43ff; */
+}
+
+#naviContainer #navi a::after {
+    transition: 1s;
+}
+
+#arrowDown {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0 0;
+    animation: fadeInUp 10s forwards;
+    /* text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #438bff,
+        0 0 82px #438bff,
+        0 0 92px #438bff,
+        0 0 102px #438bff,
+        0 0 151px #438bff; */
+}
+
+
+#aboutIntro {
+    color: white;
+}
+
+#aboutPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutContainer {
+    display: flex;
+    border: 2px solid white;
+    height: 70vh;
+}
+
+#aboutPhotoContainer {
+    /* background-color: white; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutIntroContainer {
+    width: 100%;
+}
